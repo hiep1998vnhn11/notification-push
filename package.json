@@ -33,7 +33,10 @@
     "cors": "^2.7.1",
     "express": "^4.13.3",
     "morgan": "^1.8.0",
-    "resource-router-middleware": "^0.6.0"
+    "resource-router-middleware": "^0.6.0",
+    "web-push": "^3.4.4",
+    "winston": "3",
+    "winston-telegram": "2"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
