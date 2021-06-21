@@ -1,5 +1,6 @@
 import resource from 'resource-router-middleware'
-import { webPush } from '../webpush'
+import webPush from '../webpush'
+// import bot from '../telegram'
 
 export default ({ config, db }) =>
   resource({

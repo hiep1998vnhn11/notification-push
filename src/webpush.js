@@ -1,9 +1,10 @@
-const webPush = require('web-push')
+require('dotenv').config()
+import webPush from 'web-push'
 
 webPush.setVapidDetails(
-  'http://localhost:3000',
-  'BErcLQ28_nvLlo3R1xzlId6DgIqxyfAelAotEx5Jh2Ht41EC0ffyQMcfejgrGpY3HgvL2vPSTUChJK1LFFob8Mc',
-  '1nT-V0x6UnavfMyalHcxGTa9wsw7JxfAOfd-GiH4aPM'
+  process.env.WEB_APP_URL,
+  process.env.WEB_PUSH_PUBLIC_KEY,
+  process.env.WEB_PUSH_PRIVATE_KEY
 )
 
-module.exports = { webPush }
+export default webPush

@@ -7,7 +7,10 @@ import initializeDb from './db'
 import middleware from './middleware'
 import api from './api'
 import config from './config.json'
-import { webPush } from './webpush'
+// import { webPush } from './webpush'
+import bot from './telegram'
+
+require('dotenv').config()
 
 let app = express()
 app.server = http.createServer(app)
@@ -27,6 +30,7 @@ app.use(
     limit: config.bodyLimit,
   })
 )
+// console.log(bot)
 
 // connect to db
 initializeDb((db) => {
